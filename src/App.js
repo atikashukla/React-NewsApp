@@ -21,7 +21,7 @@ const App = () => {
         <LoadingBar color="#f11946" progress={progress} />
         <Routes>
           <Route
-            path="/general"
+            path="/react-news-app/general"
             element={
               <News
                 setProgress={setProgress}
