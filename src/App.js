@@ -34,7 +34,7 @@ const App = () => {
             }
           />
           <Route
-            path="/general"
+            path="/react-news-app/general"
             element={
               <News
                 setProgress={setProgress}

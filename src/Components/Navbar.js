@@ -6,7 +6,7 @@ const Navbar = () => {
     <div>
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/general">
+          <Link className="navbar-brand" to="/react-news-app/general">
             NewsDaily
           </Link>
           <button
