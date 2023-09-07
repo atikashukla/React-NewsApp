@@ -1,0 +1,18 @@
+CHAPTER - 39
+Converting out Newsapp from class based to function based project.
+First normally we removed render() method and made function instead of exporting and importing class component.
+* As we know that Function based component me humlog default props or propTypes end me likhte hai.
+Lets suppose we forgot how to write them in functional components. What we can do in sunc situations is that we can just search - propTypes in React functional components. And open main React website and check the syntax in it.
+like this it is written 
+functionkaname.propTypes={
+
+}
+aur functionkaname.defaultProps={
+
+}
+
+* ComponentDidMount jo kam kar rha hai class based me vo function based me hmara UseEffect krega ie.., Hook.
+
+CHAPTER-40
+fixed-top bootstrap ki ek class hai jo navbar ko stickey bna deta hai.
+** // eslint-disable-next-line comment lgakr humlog warning hata skte hai agar console clear chahiye to.
