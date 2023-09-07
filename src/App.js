@@ -21,7 +21,20 @@ const App = () => {
         <LoadingBar color="#f11946" progress={progress} />
         <Routes>
           <Route
-            path="/react-news-app/general"
+            path="/"
+            element={
+              <News
+                setProgress={setProgress}
+                apiKey={apiKey}
+                key="general"
+                pageSize={pageSize}
+                country="in"
+                category="general"
+              />
+            }
+          />
+          <Route
+            path="/general"
             element={
               <News
                 setProgress={setProgress}
