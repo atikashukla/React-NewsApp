@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import "./App.css";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
 import News from "./Components/News";
 import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
@@ -9,9 +9,13 @@ import LoadingBar from "react-top-loading-bar";
 
 const App = () => {
   const pageSize = 15;
-  const apiKey = process.env.REACT_APP_NEWS_API;
+  const apiKey = process?.env?.REACT_APP_NEWS_API || null;
 
   const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    console.log("CHECKING ENV", process?.env?.REACT_APP_NEWS_API);
+  }, []);
 
   return (
     <React.Fragment>
