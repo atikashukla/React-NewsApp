@@ -4,7 +4,7 @@ import "./App.css";
 import React, { useState } from "react";
 import Navbar from "./Components/Navbar";
 import News from "./Components/News";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
 const App = () => {
@@ -15,12 +15,13 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <BrowserRouter>
+      <BrowserRouter basename="/React-NewsApp">
         <Navbar />
 
-        <LoadingBar color="#f11946" progress={progress} />
+        <LoadingBar color="/f11946" progress={progress} />
         <Routes>
           <Route
+            exact
             path="/"
             element={
               <News
@@ -34,7 +35,7 @@ const App = () => {
             }
           />
           <Route
-            path="/react-news-app/general"
+            path="/general"
             element={
               <News
                 setProgress={setProgress}
@@ -121,6 +122,20 @@ const App = () => {
                 pageSize={pageSize}
                 country="in"
                 category="technology"
+              />
+            }
+          />
+          <Route
+            exact
+            path="*"
+            element={
+              <News
+                setProgress={setProgress}
+                apiKey={apiKey}
+                key="general"
+                pageSize={pageSize}
+                country="in"
+                category="general"
               />
             }
           />
